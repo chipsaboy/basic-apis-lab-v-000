@@ -9,7 +9,7 @@ class RepositoriesController < ApplicationController
     @resp = Faraday.get 'https://api.foursquare.com/v2/venues/search' do |req|
         req.params['client_id'] = '937abfe6e3816ed93df1'
         req.params['client_secret'] = 'da15d19ccbf158b113cb7cddb909aeade5470927'
-        req.params['v'] = '20160201'
+        req.params['v'] = 'v3'
         req.params['near'] = params[:zipcode]
         req.params['query'] = 'coffee shop'
       end
